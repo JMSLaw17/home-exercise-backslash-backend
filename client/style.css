@@ -1,0 +1,59 @@
+:root { font-family: system-ui, sans-serif; color: #22313e; background: #f5f7f8; font-synthesis: none; line-height: 1.5; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 1320px; margin: 0 auto; padding: 36px 28px; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); letter-spacing: -.04em; margin: 4px 0 8px; }
+h2 { font-size: 1.1rem; }
+h3 { font-size: 1rem; margin-bottom: 8px; }
+header { margin-bottom: 26px; }
+.hint, .graph-tools, .actions span, .result-heading p { color: #596976; }
+.panel { background: #fff; border: 1px solid #dce3e7; border-radius: 10px; padding: 22px; margin-top: 18px; }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+legend { padding: 0; margin-bottom: 14px; font-weight: 650; }
+.filter-options, .actions, .legend, .result-heading, .graph-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+.filter-options label, .mode-switch label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+input[type="checkbox"], input[type="radio"] { accent-color: #171717; width: 17px; height: 17px; }
+.mode-switch { display: flex; gap: 22px; margin-bottom: 20px; }
+.advanced label { font-size: .9rem; font-weight: 600; }
+.advanced textarea { display: block; width: 100%; min-height: 140px; margin-top: 6px; padding: 12px; resize: vertical; font-family: ui-monospace, monospace; font-size: .85rem; line-height: 1.5; }
+.advanced button { margin-top: 12px; }
+.actions { margin-top: 20px; gap: 10px; }
+button, select, textarea { font: inherit; border: 1px solid #b8c5ce; border-radius: 6px; background: white; color: inherit; }
+button { padding: 7px 15px; cursor: pointer; font-weight: 550; }
+button:hover { background: #f1f1f1; }
+button.primary { background: #171717; color: #fff; border-color: #171717; }
+button.primary:hover { background: #333; }
+button:disabled { opacity: .6; cursor: wait; }
+:focus-visible { outline: 3px solid #171717; outline-offset: 3px; }
+.actions span, .hint, .notice, .graph-tools, .legend, .result-heading p { font-size: .85rem; }
+.result-heading { justify-content: space-between; margin-bottom: 18px; }
+.route-picker { display: block; font-size: .9rem; font-weight: 600; }
+select {
+  display: block; width: 100%; margin-top: 6px; padding: 10px 42px 10px 10px; font-weight: 400;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6' fill='none' stroke='%23171717' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center; background-size: 16px;
+}
+.hint { margin-top: 8px; }
+.route { display: flex; flex-wrap: wrap; gap: 6px 28px; padding: 12px 12px 12px 32px; background: #f1f1f1; color: #171717; border-radius: 6px; font-size: .85rem; overflow-wrap: anywhere; }
+.legend { gap: 8px 18px; margin: 18px 0 10px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { display: inline-block; width: 16px; height: 13px; border: 2px solid #8996a3; border-radius: 3px; background: #e8edf1; }
+.legend .public { border: 3px solid #18806b; }
+.legend .vulnerable { background: #ffe1da; border-color: #c7563d; }
+.legend .database { background: #dce7ff; border-color: #526fba; }
+.legend .unresolved { background: #fff2cb; border-color: #ad8120; border-style: dashed; }
+.graph-tools { justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+.graph-tools button { font-size: .8rem; padding: 4px 10px; }
+.graph { width: 100%; height: 560px; border: 1px solid #e0e7eb; border-radius: 6px; background: #fafcfd; }
+.message { padding: 40px 12px; text-align: center; color: #596976; }
+.error { color: #a43c2a; margin-top: 16px; overflow-wrap: anywhere; }
+.notice { margin-top: 12px; color: #735c25; }
+@media (max-width: 600px) {
+  main { padding: 22px 14px; }
+  .panel { padding: 16px; }
+  .filter-options { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .actions span { width: 100%; margin-top: 4px; }
+  .graph { height: 440px; }
+}
